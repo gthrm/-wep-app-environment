@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --memory-swap -1 -t healthcheck-webapp:latest .
+docker build --memory-swap -1 -t example-webapp:latest .

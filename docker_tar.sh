@@ -1,2 +1,2 @@
 #!/bin/bash
-docker save healthcheck-webapp:latest > hlck-webapp_docker.tar
+docker save example-webapp:latest > hlck-webapp_docker.tar

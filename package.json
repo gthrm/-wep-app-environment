@@ -81,6 +81,6 @@
       "@babel/preset-react"
     ]
   },
-  "author": "LIIS",
+  "author": "Roman Meshcheriakov",
   "license": "ISC"
 }

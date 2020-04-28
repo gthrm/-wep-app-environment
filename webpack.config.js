@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const config = require('./config/config.yml');
 
-config.backend_url = process.env.REACT_APP_API_URL || 'https://api.example.liis.su/api';
-config.expired_health_check_hours = process.env.EXPIRED_HEALTH_CHECK_HOURS || 20;
+config.backend_url = process.env.REACT_APP_API_URL || 'https://api.example.ru/api';
+config.expired_example_hours = process.env.EXPIRED_EXAMPLE_CHECK_HOURS || 20;
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
