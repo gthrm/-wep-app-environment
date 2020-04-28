@@ -5,7 +5,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const config = require('./config/config.yml');
 
 config.backend_url = process.env.REACT_APP_API_URL || 'https://api.example.ru/api';
-config.expired_example_hours = process.env.EXPIRED_EXAMPLE_CHECK_HOURS || 20;
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
@@ -35,15 +34,6 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader',
       },
-      // {
-      //   test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-      //   loader: 'url-loader',
-      //   options: {
-      //     limit: 8192,
-      //     name: '[name].[ext]',
-      //     publicPath: 'assets'
-      //   },
-      // },
       {
         test: /\.svg$/,
         loader: 'svg-inline-loader'
