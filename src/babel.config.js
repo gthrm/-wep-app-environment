@@ -15,5 +15,9 @@ module.exports = function (api) {
     '@babel/plugin-proposal-optional-chaining',
     ['babel-plugin-import', { libraryName: '@material-ui/core', libraryDirectory: 'components', camel2DashComponentName: false }],
   ];
+  console.log('NODE_ENV', process.env.NODE_ENV);
+  if (process.env.NODE_ENV !== 'development') {
+    plugins.push(['transform-remove-console', { exclude: ['error', 'warn'] }]);
+  }
   return { presets, plugins };
 };

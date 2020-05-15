@@ -8,6 +8,8 @@ import 'moment/locale/ru.js';
 import './assets/css/reset.css';
 import './assets/css/global.css';
 
+const vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 ReactDOM.render(
   <Provider store={createStore()}>

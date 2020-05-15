@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const config = require('./config/config.yml');
 
-config.backend_url = process.env.REACT_APP_API_URL || 'https://api.example.ru/api';
+config.backend_url = process.env.REACT_APP_API_URL || 'http://192.168.31.219:8080';
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
@@ -67,10 +67,9 @@ module.exports = {
         use: 'yaml-loader'
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader',
-        ],
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+        exclude: /node_modules/,
+        use: ['file-loader?name=[name].[ext]']
       },
     ]
   },
